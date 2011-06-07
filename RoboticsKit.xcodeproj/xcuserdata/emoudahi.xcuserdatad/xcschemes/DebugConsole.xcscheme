@@ -15,8 +15,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "06D91698138BFF2500261C42"
                BuildableName = "DebugConsole"
-               BlueprintName = "DebugConsole"
-               ReferencedContainer = "container:DebugConsole.xcodeproj">
+               BlueprintName = "RoboticsKit"
+               ReferencedContainer = "container:RoboticsKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,8 +42,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "06D91698138BFF2500261C42"
             BuildableName = "DebugConsole"
-            BlueprintName = "DebugConsole"
-            ReferencedContainer = "container:DebugConsole.xcodeproj">
+            BlueprintName = "RoboticsKit"
+            ReferencedContainer = "container:RoboticsKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -61,8 +61,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "06D91698138BFF2500261C42"
             BuildableName = "DebugConsole"
-            BlueprintName = "DebugConsole"
-            ReferencedContainer = "container:DebugConsole.xcodeproj">
+            BlueprintName = "RoboticsKit"
+            ReferencedContainer = "container:RoboticsKit.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

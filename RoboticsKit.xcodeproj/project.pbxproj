@@ -25,7 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		06D91699138BFF2500261C42 /* DebugConsole */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DebugConsole; sourceTree = BUILT_PRODUCTS_DIR; };
+		06D91699138BFF2500261C42 /* RoboticsKit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RoboticsKit; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D9169D138BFF2500261C42 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		06D9169F138BFF2500261C42 /* DebugConsole.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = DebugConsole.1; sourceTree = "<group>"; };
 		06D916A5138BFF4300261C42 /* ppRobotics_utest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ppRobotics_utest.c; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		06D9169A138BFF2500261C42 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				06D91699138BFF2500261C42 /* DebugConsole */,
+				06D91699138BFF2500261C42 /* RoboticsKit */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,9 +77,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		06D91698138BFF2500261C42 /* DebugConsole */ = {
+		06D91698138BFF2500261C42 /* RoboticsKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 06D916A2138BFF2500261C42 /* Build configuration list for PBXNativeTarget "DebugConsole" */;
+			buildConfigurationList = 06D916A2138BFF2500261C42 /* Build configuration list for PBXNativeTarget "RoboticsKit" */;
 			buildPhases = (
 				06D91695138BFF2500261C42 /* Sources */,
 				06D91696138BFF2500261C42 /* Frameworks */,
@@ -89,9 +89,9 @@
 			);
 			dependencies = (
 			);
-			name = DebugConsole;
+			name = RoboticsKit;
 			productName = DebugConsole;
-			productReference = 06D91699138BFF2500261C42 /* DebugConsole */;
+			productReference = 06D91699138BFF2500261C42 /* RoboticsKit */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +99,7 @@
 /* Begin PBXProject section */
 		06D91690138BFF2500261C42 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 06D91693138BFF2500261C42 /* Build configuration list for PBXProject "DebugConsole" */;
+			buildConfigurationList = 06D91693138BFF2500261C42 /* Build configuration list for PBXProject "RoboticsKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -111,7 +111,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				06D91698138BFF2500261C42 /* DebugConsole */,
+				06D91698138BFF2500261C42 /* RoboticsKit */,
 			);
 		};
 /* End PBXProject section */
@@ -169,7 +169,7 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RoboticsKit;
 			};
 			name = Debug;
 		};
@@ -180,14 +180,14 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RoboticsKit;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		06D91693138BFF2500261C42 /* Build configuration list for PBXProject "DebugConsole" */ = {
+		06D91693138BFF2500261C42 /* Build configuration list for PBXProject "RoboticsKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				06D916A0138BFF2500261C42 /* Debug */,
@@ -196,13 +196,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		06D916A2138BFF2500261C42 /* Build configuration list for PBXNativeTarget "DebugConsole" */ = {
+		06D916A2138BFF2500261C42 /* Build configuration list for PBXNativeTarget "RoboticsKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				06D916A3138BFF2500261C42 /* Debug */,
 				06D916A4138BFF2500261C42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

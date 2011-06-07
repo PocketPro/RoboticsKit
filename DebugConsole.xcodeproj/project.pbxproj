@@ -1,0 +1,210 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06D9169E138BFF2500261C42 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 06D9169D138BFF2500261C42 /* main.c */; };
+		06D916A9138BFF4300261C42 /* ppRobotics_utest.c in Sources */ = {isa = PBXBuildFile; fileRef = 06D916A5138BFF4300261C42 /* ppRobotics_utest.c */; };
+		06D916AA138BFF4300261C42 /* ppRobotics.c in Sources */ = {isa = PBXBuildFile; fileRef = 06D916A7138BFF4300261C42 /* ppRobotics.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		06D91697138BFF2500261C42 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		06D91699138BFF2500261C42 /* DebugConsole */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DebugConsole; sourceTree = BUILT_PRODUCTS_DIR; };
+		06D9169D138BFF2500261C42 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		06D9169F138BFF2500261C42 /* DebugConsole.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = DebugConsole.1; sourceTree = "<group>"; };
+		06D916A5138BFF4300261C42 /* ppRobotics_utest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ppRobotics_utest.c; sourceTree = "<group>"; };
+		06D916A6138BFF4300261C42 /* ppRobotics_utest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ppRobotics_utest.h; sourceTree = "<group>"; };
+		06D916A7138BFF4300261C42 /* ppRobotics.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ppRobotics.c; sourceTree = "<group>"; };
+		06D916A8138BFF4300261C42 /* ppRobotics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ppRobotics.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06D91696138BFF2500261C42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06D9168E138BFF2500261C42 = {
+			isa = PBXGroup;
+			children = (
+				06D916A5138BFF4300261C42 /* ppRobotics_utest.c */,
+				06D916A6138BFF4300261C42 /* ppRobotics_utest.h */,
+				06D916A7138BFF4300261C42 /* ppRobotics.c */,
+				06D916A8138BFF4300261C42 /* ppRobotics.h */,
+				06D9169C138BFF2500261C42 /* DebugConsole */,
+				06D9169A138BFF2500261C42 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		06D9169A138BFF2500261C42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06D91699138BFF2500261C42 /* DebugConsole */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06D9169C138BFF2500261C42 /* DebugConsole */ = {
+			isa = PBXGroup;
+			children = (
+				06D9169D138BFF2500261C42 /* main.c */,
+				06D9169F138BFF2500261C42 /* DebugConsole.1 */,
+			);
+			path = DebugConsole;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06D91698138BFF2500261C42 /* DebugConsole */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06D916A2138BFF2500261C42 /* Build configuration list for PBXNativeTarget "DebugConsole" */;
+			buildPhases = (
+				06D91695138BFF2500261C42 /* Sources */,
+				06D91696138BFF2500261C42 /* Frameworks */,
+				06D91697138BFF2500261C42 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DebugConsole;
+			productName = DebugConsole;
+			productReference = 06D91699138BFF2500261C42 /* DebugConsole */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06D91690138BFF2500261C42 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 06D91693138BFF2500261C42 /* Build configuration list for PBXProject "DebugConsole" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 06D9168E138BFF2500261C42;
+			productRefGroup = 06D9169A138BFF2500261C42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06D91698138BFF2500261C42 /* DebugConsole */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06D91695138BFF2500261C42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06D9169E138BFF2500261C42 /* main.c in Sources */,
+				06D916A9138BFF4300261C42 /* ppRobotics_utest.c in Sources */,
+				06D916AA138BFF4300261C42 /* ppRobotics.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		06D916A0138BFF2500261C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		06D916A1138BFF2500261C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		06D916A3138BFF2500261C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		06D916A4138BFF2500261C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06D91693138BFF2500261C42 /* Build configuration list for PBXProject "DebugConsole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06D916A0138BFF2500261C42 /* Debug */,
+				06D916A1138BFF2500261C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06D916A2138BFF2500261C42 /* Build configuration list for PBXNativeTarget "DebugConsole" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06D916A3138BFF2500261C42 /* Debug */,
+				06D916A4138BFF2500261C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 06D91690138BFF2500261C42 /* Project object */;
+}

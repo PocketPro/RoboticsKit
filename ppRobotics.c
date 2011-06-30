@@ -67,7 +67,29 @@ void PPDestroyContext(INPUT PPContext *ctx)
     free(ctx);
 }
 
-PPError PPGetDHTableFromJoint(OUTPUT PPMatrixElement dh[][4], INPUT PPJoint *joint)
+PPError PPEvaluateJoint(PPJoint *joint, PPDouble q)
+{
+    /* this function sets the joint variable, taking into account whether the 
+       joint is revolute or prismatic.
+     */
+    PPError retVal = PPSuccess;
+    
+    switch (joint->type)
+    {
+        case revolute:
+            joint->angle = q;
+            break;
+        case prismatic:
+            joint->length = q;
+            break;
+        default:
+            retVal = PPFail;
+            break;
+    }
+    return retVal;
+}
+
+PPError PPGetTransformationFromJoint(OUTPUT PPMatrixElement dh[][4], INPUT PPJoint *joint)
 {
     PPDouble angle = joint->angle;
     PPDouble twist = joint->twist;
@@ -99,6 +121,16 @@ PPError PPGetJacobianAtState(INPUT PPContext *ctx,
                              INPUT PPMatrixElement q[4],
                              INPUT PPDouble t)
 {
+    // Get the current transformation matrix
+    // Evaluate the transformation matrix with the first joint modified
+    // Update the first column of the Jacobian
+    // Evaluate the transformation matrix with the second joint modified
+    // Update the second column of the Jacobian
+    // repeat....
+    
+    
+    
+    
     return PPSuccess;
 }
 
@@ -138,7 +170,7 @@ void PPPrintJoint(INPUT PPJoint *joint)
            joint->offset, joint->angle, joint->length, joint->twist);
 }
 
-void PPPrintDHTable(INPUT PPMatrixElement dh[][4])
+void PPPrintTransformation(INPUT PPMatrixElement dh[][4])
 {
     printf("%8.4f%8.4f%8.4f%8.4f\r\n"
            "%8.4f%8.4f%8.4f%8.4f\r\n"

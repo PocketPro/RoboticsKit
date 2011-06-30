@@ -11,22 +11,22 @@
 #include <math.h>
 #include "stdio.h"
 
-int PPTestDHTable()
+int PPTestTransformation()
 {
     PPJoint joint = {revolute, 25,15,10,45};
-    PPMatrixElement dh[4][4];
+    PPMatrixElement transformation[4][4];
     
-    PPGetDHTableFromJoint(dh, &joint);
+    PPGetTransformationFromJoint(transformation, &joint);
     
     PPPrintJoint(&joint);
-    PPPrintDHTable(dh);
+    PPPrintTransformation(transformation);
     
-    PPMatrixElement dh_expected[4][4] = {{0.96593, -0.18301, 0.18301, 9.65926},
+    PPMatrixElement transformation_expected[4][4] = {{0.96593, -0.18301, 0.18301, 9.65926},
         {0.25882, 0.68301, -0.68301, 2.58819},
         {0, 0.70711, 0.70711, 25},
         {0,0,0,1}};
     
-    if (PPDoMatricesMatch(dh, dh_expected, 0.0001))
+    if (PPDoMatricesMatch(transformation, transformation_expected, 0.0001))
     {
         return TRUE;
     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		067C8AC913BCF4E90057DEFF /* ppRobotics_math.c in Sources */ = {isa = PBXBuildFile; fileRef = 067C8AC713BCF4E90057DEFF /* ppRobotics_math.c */; };
+		067C8ACE13BD0AC30057DEFF /* libgsl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 067C8ACD13BD0AC30057DEFF /* libgsl.a */; };
 		06D9169E138BFF2500261C42 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 06D9169D138BFF2500261C42 /* main.c */; };
 		06D916A9138BFF4300261C42 /* ppRobotics_utest.c in Sources */ = {isa = PBXBuildFile; fileRef = 06D916A5138BFF4300261C42 /* ppRobotics_utest.c */; };
 		06D916AA138BFF4300261C42 /* ppRobotics.c in Sources */ = {isa = PBXBuildFile; fileRef = 06D916A7138BFF4300261C42 /* ppRobotics.c */; };
@@ -25,6 +27,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		067C8AC713BCF4E90057DEFF /* ppRobotics_math.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ppRobotics_math.c; sourceTree = "<group>"; };
+		067C8AC813BCF4E90057DEFF /* ppRobotics_math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ppRobotics_math.h; sourceTree = "<group>"; };
+		067C8ACD13BD0AC30057DEFF /* libgsl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgsl.a; sourceTree = "<group>"; };
 		06D91699138BFF2500261C42 /* RoboticsKit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RoboticsKit; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D9169D138BFF2500261C42 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		06D9169F138BFF2500261C42 /* DebugConsole.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = DebugConsole.1; sourceTree = "<group>"; };
@@ -39,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				067C8ACE13BD0AC30057DEFF /* libgsl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +54,9 @@
 		06D9168E138BFF2500261C42 = {
 			isa = PBXGroup;
 			children = (
+				067C8ACD13BD0AC30057DEFF /* libgsl.a */,
+				067C8AC713BCF4E90057DEFF /* ppRobotics_math.c */,
+				067C8AC813BCF4E90057DEFF /* ppRobotics_math.h */,
 				06D916A5138BFF4300261C42 /* ppRobotics_utest.c */,
 				06D916A6138BFF4300261C42 /* ppRobotics_utest.h */,
 				06D916A7138BFF4300261C42 /* ppRobotics.c */,
@@ -124,6 +133,7 @@
 				06D9169E138BFF2500261C42 /* main.c in Sources */,
 				06D916A9138BFF4300261C42 /* ppRobotics_utest.c in Sources */,
 				06D916AA138BFF4300261C42 /* ppRobotics.c in Sources */,
+				067C8AC913BCF4E90057DEFF /* ppRobotics_math.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +152,10 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "/usr/local/include/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -157,7 +169,9 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "/usr/local/include/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -165,10 +179,16 @@
 		06D916A3138BFF2500261C42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				HEADER_SEARCH_PATHS = "/usr/local/include/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../..\"",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = RoboticsKit;
 			};
 			name = Debug;
@@ -176,10 +196,16 @@
 		06D916A4138BFF2500261C42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				HEADER_SEARCH_PATHS = "/usr/local/include/**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../..\"",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = RoboticsKit;
 			};
 			name = Release;

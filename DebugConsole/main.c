@@ -9,12 +9,11 @@
 #include <stdio.h>
 #include "ppRobotics.h"
 #include "ppRobotics_utest.h"
-#include "math.h"
+#include "ppRobotics_math.h"
 int main (int argc, const char * argv[])
 {
-
     // insert code here...
-    if (PPTestDHTable())
+    if (PPTestTransformation())
     {
         printf("PPTestDHTable passed\n");
     }

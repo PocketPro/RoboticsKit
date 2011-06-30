@@ -58,16 +58,15 @@ PPDouble PPSin(INPUT PPDouble degree);
 
 #pragma mark - Core Methods
 PPContext *PPCreateContext(INPUT void *joint, ...);
-
 void PPDestroyContext(INPUT PPContext *ctx);
 
-PPError PPGetDHTableFromJoint(INPUT PPMatrixElement dh[][4], OUTPUT PPJoint *joint);
+PPError PPEvaluateJoint(PPJoint *joint, PPDouble q);
 
+PPError PPGetTransformationFromJoint(OUTPUT PPMatrixElement dh[][4], INPUT PPJoint *joint);
 PPError PPGetJacobianAtState(INPUT PPContext *ctx, INPUT PPMatrixElement q[4], INPUT PPDouble t);
 
-
-#pragma mark -
 #pragma mark TODO
+#pragma mark * add method to evaluate the entire transformation matrix
 #pragma mark * add jacobian method
 #pragma mark * add null space
 #pragma mark * add sqp method (if required to calculate initial condition)
@@ -82,6 +81,6 @@ int PPDoMatricesMatch(INPUT PPMatrixElement dh1[][4],
 int PPDoJointsMatch(INPUT PPJoint *joint1, INPUT PPJoint *joint2);
                     
 void PPPrintJoint(INPUT PPJoint *joint);
-void PPPrintDHTable(INPUT PPMatrixElement dh[][4]);
+void PPPrintTransformation(INPUT PPMatrixElement dh[][4]);
 
 #endif

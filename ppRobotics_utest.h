@@ -8,7 +8,7 @@
 #ifndef _PPROBOTICS_UTEST_H_
 #define _PPROBOTICS_UTEST_H_
 
-int PPTestDHTable();
+int PPTestTransformation();
 int PPTestCreateContext();
 
 #endif

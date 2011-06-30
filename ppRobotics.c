@@ -12,7 +12,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-
+#pragma mark - Helper Methods
 PPDouble PPCos(INPUT PPDouble degree)
 {
     return cos(degree*M_PI/180.0);
@@ -23,21 +23,17 @@ PPDouble PPSin(INPUT PPDouble degree)
     return sin(degree*M_PI/180.0);
 }
 
-
+#pragma mark - Core Methods
 PPContext *PPCreateContext(void *joint, ...)
 {
     va_list ap;
     PPInt i, count;
     PPJoint **joints;
-    PPContext *ctx;
+    PPContext *ctx = malloc(sizeof(PPContext*));
 
-    joints = malloc(sizeof(PPJoint*)*count);
-    if (joints == NULL)
-    {
-        return NULL;
-    }
-    
-    /* get the number of arguments */
+    /* get the number of joints passed in as arguments. We need the number of
+       joints to know how much space we must allocate for the context pointer.
+     */
     count = 1;
     va_start(ap, joint);
     while( va_arg(ap, void*) != NULL)
@@ -45,7 +41,15 @@ PPContext *PPCreateContext(void *joint, ...)
         count++;
     }
     
-    /* create a new context and population the joints array */
+    joints = malloc(sizeof(PPJoint*)*count);
+    if (joints == NULL)
+    {
+        return NULL;
+    }
+    
+    /* create a new context and populate the joints array. The first joint has
+       to be added external to the loop.
+     */
     va_start(ap, joint);
     joints[0] =  (PPJoint*)joint;
     for (i = 1; i < count; i++)
@@ -56,6 +60,11 @@ PPContext *PPCreateContext(void *joint, ...)
     
     ctx->joints = joints;
     return ctx;
+}
+
+void PPDestroyContext(INPUT PPContext *ctx)
+{
+    free(ctx);
 }
 
 PPError PPGetDHTableFromJoint(OUTPUT PPMatrixElement dh[][4], INPUT PPJoint *joint)
@@ -90,7 +99,7 @@ PPError PPGetJacobianAtState(INPUT PPContext *ctx,
                              INPUT PPMatrixElement q[4],
                              INPUT PPDouble t)
 {
-    
+    return PPSuccess;
 }
 
 #pragma mark - Debug Methods

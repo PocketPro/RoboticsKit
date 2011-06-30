@@ -13,7 +13,7 @@
 #define OUTPUT
 #define TRUE 1
 #define FALSE 0
-#define DEFTOL 0.0001
+#define DEFTOL 0.00000001
 #include "ppRobotics.h"
 
 
@@ -36,6 +36,7 @@ typedef enum _PPError
 
 typedef struct _PPJoint
 {
+    PPJointType type;
     PPDouble offset;
     PPDouble angle;
     PPDouble length;
@@ -48,23 +49,22 @@ typedef struct _PPContext
     PPJoint **joints;
 } PPContext;
 
-PPContext *PPCreateContext(void *joint, ...);
-
+#pragma mark - Helper Methods
 /*
  wrapper methods for cos and sin that accept angles in degrees rather than radians.
  */
 PPDouble PPCos(INPUT PPDouble degree);
 PPDouble PPSin(INPUT PPDouble degree);
 
-PPError PPGetDHTableFromJoint(INPUT PPMatrixElement dh[][4], 
-                              OUTPUT PPJoint *joint);
+#pragma mark - Core Methods
+PPContext *PPCreateContext(INPUT void *joint, ...);
 
-/*
- returns the joacobian of the system 'A' evaluated at state 'q'
- */
-PPError PPGetJacobianAtState(INPUT PPContext *ctx,
-                             INPUT PPMatrixElement q[4],
-                             INPUT PPDouble t);
+void PPDestroyContext(INPUT PPContext *ctx);
+
+PPError PPGetDHTableFromJoint(INPUT PPMatrixElement dh[][4], OUTPUT PPJoint *joint);
+
+PPError PPGetJacobianAtState(INPUT PPContext *ctx, INPUT PPMatrixElement q[4], INPUT PPDouble t);
+
 
 #pragma mark -
 #pragma mark TODO

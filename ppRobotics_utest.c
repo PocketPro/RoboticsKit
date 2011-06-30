@@ -13,7 +13,7 @@
 
 int PPTestDHTable()
 {
-    PPJoint joint = {25,15,10,45};
+    PPJoint joint = {revolute, 25,15,10,45};
     PPMatrixElement dh[4][4];
     
     PPGetDHTableFromJoint(dh, &joint);
@@ -35,8 +35,8 @@ int PPTestDHTable()
 
 int PPTestCreateContext()
 {
-    PPJoint j1 = {10,10,10,10};
-    PPJoint j2 = {20,20,20,20};
+    PPJoint j1 = {revolute, 10,10,10,10};
+    PPJoint j2 = {revolute, 20,20,20,20};
     PPJoint *_j1, *_j2;
     PPContext *ctx = PPCreateContext(&j1, &j2, (void*)NULL);
     

@@ -56,13 +56,19 @@ typedef struct _PPContext
 PPDouble PPCos(INPUT PPDouble degree);
 PPDouble PPSin(INPUT PPDouble degree);
 
+
+
+
 #pragma mark - Core Methods
+
 PPContext *PPCreateContext(INPUT void *joint, ...);
+
 void PPDestroyContext(INPUT PPContext *ctx);
 
 PPError PPEvaluateJoint(PPJoint *joint, PPDouble q);
 
 PPError PPGetTransformationFromJoint(OUTPUT PPMatrixElement dh[][4], INPUT PPJoint *joint);
+
 PPError PPGetJacobianAtState(INPUT PPContext *ctx, INPUT PPMatrixElement q[4], INPUT PPDouble t);
 
 #pragma mark TODO
@@ -73,6 +79,10 @@ PPError PPGetJacobianAtState(INPUT PPContext *ctx, INPUT PPMatrixElement q[4], I
 #pragma mark * add matrix inversion method
 #pragma mark * add any methods required for objective function
 #pragma mark * add testing methods
+
+
+
+
 
 #pragma mark - Debug Methods
 int PPDoMatricesMatch(INPUT PPMatrixElement dh1[][4], 
